@@ -1,0 +1,96 @@
+header {
+	position: relative;
+	padding-top: 200px;
+	.big-blue-square {
+		background-color: $color-003;
+		width: 38.5%;
+		height: 100%;
+		position: absolute;
+		z-index: -1;
+	}
+	.hero {
+		&--title {
+			position: relative;
+			background-color: $color-005;
+			max-width: 650px;
+			height: 150px;
+			margin: 300px 0 0 25%;
+			box-shadow: -5px 5px 20px rgba($color: #000000, $alpha: 0.2);
+			&__titles {
+				position: absolute;
+				bottom: 70%;
+				right: 20%;
+				p {
+					font-family: $font-003;
+					font-size: 54px;
+				}
+				h1 {
+					font-family: $font-003;
+					font-size: 100px;
+					font-weight: 600;
+				}
+				.blue-square::before {
+					bottom: 35%;
+					right: 102%;
+				}
+			}
+			.slogan {
+				font-family: $font-002;
+				letter-spacing: 3px;
+				position: absolute;
+				bottom: 10%;
+				left: 20%;
+				max-width: 70%;
+				line-height: 130%;
+				&::before {
+					content: '';
+					position: absolute;
+					width: 150%;
+					height: 2px;
+					background-color: $color-004;
+					bottom: 150%;
+				}
+			}
+			img {
+				border-radius: 50%;
+				position: absolute;
+				left: 86%;
+				bottom: -20%;
+			}
+		}
+		&--text {
+			max-width: 600px;
+			margin: 50px 0 0 41%;
+			p {
+				font-family: $font-001;
+				line-height: 150%;
+				&:last-of-type {
+					margin: 20px 0 50px;
+				}
+				span {
+					position: relative;
+					&::after {
+						content: '';
+						position: absolute;
+						left: 120%;
+						bottom: 20%;
+						height: 15px;
+						width: 15px;
+						background-color: $color-004;
+					}
+				}
+			}
+			h2 {
+				color: $color-006;
+				font-size: 25px;
+				font-family: $font-002;
+				margin: 20px auto;
+				width: fit-content;
+				width: -moz-fit-content;
+			}
+			.intro {
+				font-weight: 500;
+			}
+		}
+	}
+}

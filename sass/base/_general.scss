@@ -1,0 +1,27 @@
+.container {
+	max-width: 80%;
+	margin: 0 auto;
+}
+
+a {
+	text-decoration: none;
+}
+
+.blue-square {
+	position: relative;
+	display: block;
+
+	&::before {
+		content: '';
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		background-color: $color-004;
+		right: 102%;
+		bottom: 20%;
+	}
+}
+
+strong {
+	font-weight: 600;
+}

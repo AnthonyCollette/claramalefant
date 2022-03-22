@@ -1,0 +1,401 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.blue-square {
+  position: relative;
+  display: block;
+}
+.blue-square::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: #0050ff;
+  right: 102%;
+  bottom: 20%;
+}
+
+strong {
+  font-weight: 600;
+}
+
+.btn-primary {
+  padding: 10px 30px;
+  background-color: #ed45a0;
+  color: #fff;
+  font-style: italic;
+  border-radius: 50px;
+  border: 2px solid #ed45a0;
+  cursor: pointer;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 17px;
+  transition-duration: 0.4s;
+  display: block;
+  width: -webkit-fit-content;
+  width: fit-content;
+  width: -moz-fit-content;
+  margin: 0 auto;
+  box-shadow: 0 5px 0 #f9bdff;
+}
+
+nav {
+  padding: 80px 0;
+  background-color: #fff;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav .brand a {
+  display: block;
+}
+nav .brand a.logo {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: #000;
+}
+nav .brand a.slogan {
+  font-family: "Avenir", sans-serif;
+  font-size: 17px;
+  margin-top: 10px;
+  color: #000;
+  font-weight: 100;
+}
+nav ul {
+  display: flex;
+}
+nav ul li {
+  text-transform: uppercase;
+  font-family: "Avenir", sans-serif;
+  font-weight: 600;
+  padding: 10px 20px;
+  position: relative;
+  transition-duration: 0.4s;
+}
+nav ul li a {
+  color: #000;
+  transition-duration: 0.4s;
+  font-size: 14px;
+}
+nav ul li::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background-color: #f9bdff;
+  z-index: -1;
+  left: 0%;
+  top: 50%;
+}
+nav ul li:active::before, nav ul li:focus::before, nav ul li:hover::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  transition-duration: 0.4s;
+}
+nav ul .active {
+  display: block;
+  position: relative;
+}
+nav ul .active::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 15px;
+  background-color: #aac5ff;
+  z-index: -1;
+  left: 0%;
+  top: 50%;
+}
+
+header {
+  position: relative;
+  padding-top: 200px;
+}
+header .big-blue-square {
+  background-color: #aac5ff;
+  width: 38.5%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+}
+header .hero--title {
+  position: relative;
+  background-color: #f9bdff;
+  max-width: 650px;
+  height: 150px;
+  margin: 300px 0 0 25%;
+  box-shadow: -5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+header .hero--title__titles {
+  position: absolute;
+  bottom: 70%;
+  right: 20%;
+}
+header .hero--title__titles p {
+  font-family: "Spinnaker", sans-serif;
+  font-size: 54px;
+}
+header .hero--title__titles h1 {
+  font-family: "Spinnaker", sans-serif;
+  font-size: 100px;
+  font-weight: 600;
+}
+header .hero--title__titles .blue-square::before {
+  bottom: 35%;
+  right: 102%;
+}
+header .hero--title .slogan {
+  font-family: "Avenir", sans-serif;
+  letter-spacing: 3px;
+  position: absolute;
+  bottom: 10%;
+  left: 20%;
+  max-width: 70%;
+  line-height: 130%;
+}
+header .hero--title .slogan::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 2px;
+  background-color: #0050ff;
+  bottom: 150%;
+}
+header .hero--title img {
+  border-radius: 50%;
+  position: absolute;
+  left: 86%;
+  bottom: -20%;
+}
+header .hero--text {
+  max-width: 600px;
+  margin: 50px 0 0 41%;
+}
+header .hero--text p {
+  font-family: "Poppins", sans-serif;
+  line-height: 150%;
+}
+header .hero--text p:last-of-type {
+  margin: 20px 0 50px;
+}
+header .hero--text p span {
+  position: relative;
+}
+header .hero--text p span::after {
+  content: "";
+  position: absolute;
+  left: 120%;
+  bottom: 20%;
+  height: 15px;
+  width: 15px;
+  background-color: #0050ff;
+}
+header .hero--text h2 {
+  color: #ed45a0;
+  font-size: 25px;
+  font-family: "Avenir", sans-serif;
+  margin: 20px auto;
+  width: -webkit-fit-content;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+header .hero--text .intro {
+  font-weight: 500;
+}
+
+footer {
+  background-color: #fff;
+  margin-top: 100px;
+  padding: 50px 0;
+}
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+footer .container .copyright li {
+  margin-top: 10px;
+}
+footer .container .copyright a {
+  color: #000;
+  font-family: "Avenir", sans-serif;
+}
+footer .container .copyright p {
+  margin-top: 30px;
+  font-family: "Avenir", sans-serif;
+}
+footer .container .contacts {
+  display: flex;
+  font-family: "Avenir", sans-serif;
+}
+footer .container .contacts p {
+  margin-top: 10px;
+}
+footer .container .contacts .left-column p {
+  font-weight: 600;
+}
+footer .container .contacts .left-column .margin-top {
+  margin-top: 55px;
+}
+footer .container .contacts .right-column {
+  margin-left: 50px;
+}
+footer .container .contacts .right-column .margin-top {
+  margin-top: 30px;
+}
+footer .container .contacts .right-column i {
+  margin-right: 20px;
+  color: #000;
+  transition-duration: 0.4s;
+}
+footer .container .contacts .right-column a:hover i {
+  color: #aac5ff;
+}

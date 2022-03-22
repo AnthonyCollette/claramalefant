@@ -1,0 +1,81 @@
+nav {
+	padding: 80px 0;
+	background-color: $color-002;
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	left: 0;
+	right: 0;
+	.container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.brand {
+		a {
+			display: block;
+		}
+		a.logo {
+			font-family: $font-001;
+			font-weight: 700;
+			font-size: 25px;
+			color: $color-001;
+		}
+		a.slogan {
+			font-family: $font-002;
+			font-size: 17px;
+			margin-top: 10px;
+			color: $color-001;
+			font-weight: 100;
+		}
+	}
+	ul {
+		display: flex;
+		li {
+			text-transform: uppercase;
+			font-family: $font-002;
+			font-weight: 600;
+			padding: 10px 20px;
+			position: relative;
+			transition-duration: 0.4s;
+			a {
+				color: $color-001;
+				transition-duration: 0.4s;
+				font-size: 14px;
+			}
+			&::before {
+				content: '';
+				width: 1px;
+				height: 15px;
+				background-color: $color-005;
+				z-index: -1;
+				left: 0%;
+				top: 50%;
+			}
+			&:active,
+			&:focus,
+			&:hover {
+				&::before {
+					content: '';
+					position: absolute;
+					width: 80%;
+					transition-duration: 0.4s;
+				}
+			}
+		}
+		.active {
+			display: block;
+			position: relative;
+			&::before {
+				content: '';
+				position: absolute;
+				width: 80%;
+				height: 15px;
+				background-color: $color-003;
+				z-index: -1;
+				left: 0%;
+				top: 50%;
+			}
+		}
+	}
+}
