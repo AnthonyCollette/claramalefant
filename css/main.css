@@ -166,7 +166,6 @@ strong {
   color: #fff;
   font-style: italic;
   border-radius: 50px;
-  border: 2px solid #ed45a0;
   cursor: pointer;
   font-family: "Times New Roman", Times, serif;
   font-size: 17px;
@@ -177,6 +176,9 @@ strong {
   width: -moz-fit-content;
   margin: 0 auto;
   box-shadow: 0 5px 0 #f9bdff;
+}
+.btn-primary:hover {
+  background-color: rgba(237, 69, 160, 0.8);
 }
 
 nav {
@@ -203,18 +205,18 @@ nav .brand a.logo {
   color: #000;
 }
 nav .brand a.slogan {
-  font-family: "Avenir", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 17px;
   margin-top: 10px;
   color: #000;
-  font-weight: 100;
+  font-weight: 300;
 }
 nav ul {
   display: flex;
 }
 nav ul li {
   text-transform: uppercase;
-  font-family: "Avenir", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   padding: 10px 20px;
   position: relative;
@@ -293,7 +295,7 @@ header .hero--title__titles .blue-square::before {
   right: 102%;
 }
 header .hero--title .slogan {
-  font-family: "Avenir", sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 3px;
   position: absolute;
   bottom: 10%;
@@ -320,7 +322,7 @@ header .hero--text {
   margin: 50px 0 0 41%;
 }
 header .hero--text p {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 150%;
 }
 header .hero--text p:last-of-type {
@@ -341,7 +343,7 @@ header .hero--text p span::after {
 header .hero--text h2 {
   color: #ed45a0;
   font-size: 25px;
-  font-family: "Avenir", sans-serif;
+  font-family: "Montserrat", sans-serif;
   margin: 20px auto;
   width: -webkit-fit-content;
   width: fit-content;
@@ -366,15 +368,19 @@ footer .container .copyright li {
 }
 footer .container .copyright a {
   color: #000;
-  font-family: "Avenir", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  transition-duration: 0.4s;
+}
+footer .container .copyright a:hover {
+  color: #aac5ff;
 }
 footer .container .copyright p {
   margin-top: 30px;
-  font-family: "Avenir", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 footer .container .contacts {
   display: flex;
-  font-family: "Avenir", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 footer .container .contacts p {
   margin-top: 10px;

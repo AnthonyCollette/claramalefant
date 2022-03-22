@@ -13,6 +13,10 @@ footer {
 			a {
 				color: $color-001;
 				font-family: $font-002;
+				transition-duration: 0.4s;
+				&:hover {
+					color: $color-003;
+				}
 			}
 			p {
 				margin-top: 30px;
