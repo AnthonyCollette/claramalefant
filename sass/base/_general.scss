@@ -25,3 +25,16 @@ a {
 strong {
 	font-weight: 600;
 }
+
+.transform-up {
+	transform: rotate(180deg);
+}
+
+.display-flex {
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+section {
+	padding: 150px 0;
+}

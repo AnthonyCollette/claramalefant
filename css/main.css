@@ -160,6 +160,39 @@ strong {
   font-weight: 600;
 }
 
+.transform-up {
+  transform: rotate(180deg);
+}
+
+.display-flex {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+section {
+  padding: 150px 0;
+}
+
+h1 {
+  font-size: 35px;
+  font-family: "Poppins", sans-serif;
+  position: relative;
+  font-weight: 700;
+  width: -webkit-fit-content;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+h1::before {
+  position: absolute;
+  content: "";
+  right: 105%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  background-color: #0050ff;
+}
+
 .btn-primary {
   padding: 10px 30px;
   background-color: #ed45a0;
@@ -179,6 +212,24 @@ strong {
 }
 .btn-primary:hover {
   background-color: rgba(237, 69, 160, 0.8);
+}
+
+.btn-more, .btn-less {
+  background-color: transparent;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  border: none;
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+  cursor: pointer;
+}
+.btn-more:hover, .btn-less:hover {
+  color: #0050ff;
+}
+
+.btn-less {
+  display: none;
 }
 
 nav {
@@ -222,7 +273,8 @@ nav ul li {
   position: relative;
   transition-duration: 0.4s;
 }
-nav ul li a {
+nav ul li a,
+nav ul li span {
   color: #000;
   transition-duration: 0.4s;
   font-size: 14px;
@@ -242,6 +294,14 @@ nav ul li:active::before, nav ul li:focus::before, nav ul li:hover::before {
   width: 80%;
   transition-duration: 0.4s;
 }
+nav ul li:nth-child(3) {
+  position: relative;
+  cursor: pointer;
+}
+nav ul li:nth-child(3) i {
+  transition-duration: 0.4s;
+  margin-left: 5px;
+}
 nav ul .active {
   display: block;
   position: relative;
@@ -255,6 +315,35 @@ nav ul .active::before {
   z-index: -1;
   left: 0%;
   top: 50%;
+}
+nav .submenu {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  transition-duration: 0.4s;
+}
+nav .submenu a {
+  margin: 10px 0;
+  display: block;
+  position: relative;
+}
+nav .submenu a::before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  background-color: #f9bdff;
+  z-index: -1;
+  left: -10%;
+  top: 50%;
+}
+nav .submenu a:active::before, nav .submenu a:focus::before, nav .submenu a:hover::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  transition-duration: 0.4s;
 }
 
 header {
@@ -289,6 +378,9 @@ header .hero--title__titles h1 {
   font-family: "Spinnaker", sans-serif;
   font-size: 100px;
   font-weight: 600;
+}
+header .hero--title__titles h1::before {
+  display: none;
 }
 header .hero--title__titles .blue-square::before {
   bottom: 35%;
@@ -404,4 +496,212 @@ footer .container .contacts .right-column i {
 }
 footer .container .contacts .right-column a:hover i {
   color: #aac5ff;
+}
+
+.portfolio {
+  background-color: #e8e6e6;
+}
+.portfolio .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.portfolio .container > p {
+  font-family: "Montserrat", sans-serif;
+  line-height: 180%;
+  max-width: 40%;
+  text-align: center;
+  margin: 50px 0;
+}
+.portfolio .card {
+  width: 600px;
+  max-width: 80%;
+  position: relative;
+  margin: 50px 0;
+  transition-duration: 0.4s;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.portfolio .card::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 20px;
+  width: 7px;
+  height: 40px;
+  background-color: #f9bdff;
+}
+.portfolio .card ul {
+  display: none;
+}
+.portfolio .card--wrapper {
+  background-color: #fff;
+  display: flex;
+}
+.portfolio .card--wrapper > img {
+  display: block;
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition-duration: 0.4s;
+}
+.portfolio .card--text {
+  padding: 20px;
+  position: relative;
+}
+.portfolio .card--text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+.portfolio .card--text h2 {
+  font-size: 20px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: #000;
+  margin-bottom: 20px;
+  line-height: 130%;
+}
+.portfolio .card--text > div > div {
+  display: flex;
+  align-items: center;
+}
+.portfolio .card--text > div > div img {
+  width: 36px;
+  margin-right: 20px;
+}
+.portfolio .card--text .date {
+  margin: 50px 0 10px;
+}
+.portfolio .card--text .date--text {
+  display: flex;
+  flex-direction: column;
+}
+.portfolio .card--text .date p:last-of-type {
+  font-size: 10px;
+  font-family: "Poppins", sans-serif;
+  font-style: italic;
+  margin-top: 8px;
+}
+.portfolio .card--text .date p:first-of-type {
+  color: #0050ff;
+  font-weight: 600;
+}
+.portfolio .card button {
+  transition-duration: 0.4s;
+  background-color: #f9bdff;
+  color: #000;
+  padding: 10px 40px 10px 20px;
+  position: absolute;
+  width: -webkit-fit-content;
+  width: fit-content;
+  width: -moz-fit-content;
+  height: -webkit-fit-content;
+  height: fit-content;
+  height: -moz-fit-content;
+  bottom: -15px;
+  left: 77%;
+  font-weight: 600;
+  box-shadow: 5px 5px 5px rgba(237, 69, 160, 0);
+}
+.portfolio .card button:hover {
+  box-shadow: 5px 5px 5px #ed45a0;
+}
+.portfolio .card button::before {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  left: 82%;
+  top: 45%;
+  background-color: #000;
+  opacity: 1;
+  transition-duration: 0.4;
+}
+.portfolio .card button::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 2px;
+  left: 82%;
+  top: 45%;
+  transform: rotate(90deg);
+  background-color: #000;
+  transition-duration: 0.4;
+}
+.portfolio .open-card {
+  transform: scale(1.2);
+  background-color: #82a3eb;
+}
+.portfolio .open-card img {
+  width: 25%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.portfolio .open-card ul {
+  display: block;
+  padding: 20px 0;
+  margin: 0 auto;
+  max-width: 80%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  color: #fff;
+}
+.portfolio .open-card ul li {
+  margin-bottom: 10px;
+  position: relative;
+}
+.portfolio .open-card ul li::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  right: 102%;
+  top: 4px;
+  background-color: #fff;
+}
+.portfolio .open-card .card--text {
+  padding: 15px 10px 10px;
+}
+.portfolio .open-card .card--text__wrapper {
+  margin: 0 auto;
+  width: -webkit-fit-content;
+  width: fit-content;
+  width: -moz-fit-content;
+}
+.portfolio .open-card .card--text > div {
+  display: flex;
+}
+.portfolio .open-card .card--text h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+.portfolio .open-card .card--text .date {
+  margin: 10px 0;
+}
+.portfolio .open-card .card--text .location {
+  margin-left: 50px;
+}
+.portfolio .open-card .card--text > div img {
+  width: 20px;
+}
+.portfolio .open-card .btn-more, .portfolio .open-card .btn-less {
+  display: none;
+}
+.portfolio .open-card .btn-less {
+  display: block;
+}
+.portfolio .open-card button {
+  transition-duration: 0.4s;
+  color: #000;
+  left: 83%;
+  bottom: -15px;
+}
+.portfolio .open-card button::before {
+  opacity: 0;
+  transition-duration: 0.4s;
+}
+.portfolio .open-card button::after {
+  transform: rotate(0deg);
+  transition-duration: 0.4s;
+  left: 75%;
+  top: 48%;
 }

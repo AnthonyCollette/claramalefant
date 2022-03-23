@@ -17,3 +17,22 @@
 		background-color: rgba($color: $color-006, $alpha: 0.8);
 	}
 }
+
+.btn-more {
+	background-color: transparent;
+	font-family: $font-001;
+	font-size: 14px;
+	border: none;
+	position: absolute;
+	bottom: 10px;
+	right: 40px;
+	cursor: pointer;
+	&:hover {
+		color: $color-004;
+	}
+}
+
+.btn-less {
+	@extend .btn-more;
+	display: none;
+}

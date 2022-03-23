@@ -1,0 +1,18 @@
+h1 {
+	font-size: 35px;
+	font-family: $font-001;
+	position: relative;
+	font-weight: 700;
+	width: fit-content;
+	width: -moz-fit-content;
+	&::before {
+		position: absolute;
+		content: '';
+		right: 105%;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 15px;
+		height: 15px;
+		background-color: $color-004;
+	}
+}

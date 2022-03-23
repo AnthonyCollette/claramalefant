@@ -28,6 +28,9 @@ header {
 					font-family: $font-003;
 					font-size: 100px;
 					font-weight: 600;
+					&::before {
+						display: none;
+					}
 				}
 				.blue-square::before {
 					bottom: 35%;

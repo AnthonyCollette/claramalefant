@@ -1,7 +1,9 @@
 @import './base/reset';
 @import './utils/variables';
 @import './base/general';
+@import './base/typography';
 @import './components/buttons';
-@import './components/nav';
+@import './layout/nav';
 @import './layout/header';
-@import './components/footer';
+@import './layout/footer';
+@import './pages/portfolio';

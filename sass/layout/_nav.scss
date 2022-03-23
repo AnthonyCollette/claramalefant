@@ -38,7 +38,8 @@ nav {
 			padding: 10px 20px;
 			position: relative;
 			transition-duration: 0.4s;
-			a {
+			a,
+			span {
 				color: $color-001;
 				transition-duration: 0.4s;
 				font-size: 14px;
@@ -63,6 +64,14 @@ nav {
 				}
 			}
 		}
+		li:nth-child(3) {
+			position: relative;
+			cursor: pointer;
+			i {
+				transition-duration: 0.4s;
+				margin-left: 5px;
+			}
+		}
 		.active {
 			display: block;
 			position: relative;
@@ -75,6 +84,39 @@ nav {
 				z-index: -1;
 				left: 0%;
 				top: 50%;
+			}
+		}
+	}
+	.submenu {
+		display: flex;
+		visibility: hidden;
+		opacity: 0;
+		flex-direction: column;
+		position: absolute;
+		top: 100%;
+		transition-duration: 0.4s;
+		a {
+			margin: 10px 0;
+			display: block;
+			position: relative;
+			&::before {
+				content: '';
+				width: 1px;
+				height: 15px;
+				background-color: $color-005;
+				z-index: -1;
+				left: -10%;
+				top: 50%;
+			}
+			&:active,
+			&:focus,
+			&:hover {
+				&::before {
+					content: '';
+					position: absolute;
+					width: 80%;
+					transition-duration: 0.4s;
+				}
 			}
 		}
 	}
