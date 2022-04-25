@@ -1,12 +1,24 @@
 footer {
 	background-color: $color-002;
-	margin-top: 100px;
+	margin-top: 20px;
 	padding: 50px 0;
+	@include min($lg) {
+		margin-top: 100px;
+	}
 	.container {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
 		align-items: center;
+		@include min($lg) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
 		.copyright {
+			margin-bottom: 20px;
+			@include min($lg) {
+				margin-bottom: 0;
+			}
 			li {
 				margin-top: 10px;
 			}
@@ -38,7 +50,10 @@ footer {
 				}
 			}
 			.right-column {
-				margin-left: 50px;
+				margin-left: 20px;
+				@include min($lg) {
+					margin-left: 50px;
+				}
 				.margin-top {
 					margin-top: 30px;
 				}

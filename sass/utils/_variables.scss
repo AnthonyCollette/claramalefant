@@ -8,10 +8,34 @@ $color-005: #f9bdff;
 $color-006: #ed45a0;
 $color-007: #e8e6e6;
 $color-008: #82a3eb;
+$color-009: #ff94e1;
+$color-010: #dbf0ff;
+$color-011: #ffdcf5;
+$color-012: #676767;
+$color-013: #cbddea;
+$color-014: #f2f2f2;
 
 // FONTS
 
 $font-001: 'Poppins', sans-serif;
-// $font-002: 'Avenir', sans-serif;
 $font-002: 'Montserrat', sans-serif;
 $font-003: 'Spinnaker', sans-serif;
+
+// FONT-SIZES
+
+$font-xxxl: 2.5rem;
+$font-xxl: 2rem;
+$font-xl: 1.5rem;
+$font-lg: 1.25rem;
+$font-md: 1rem;
+$font-sm: 0.875rem;
+$font-xs: 0.625rem;
+
+// SCREEN SIZES
+
+$sm: 576px;
+$md: 768px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$xxxl: 1800px;

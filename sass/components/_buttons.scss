@@ -36,3 +36,96 @@
 	@extend .btn-more;
 	display: none;
 }
+
+.btn-secondary {
+	font-family: $font-001;
+	font-size: $font-md;
+	transition: all 0.4s ease-out;
+	cursor: pointer;
+	border: none;
+	position: relative;
+	background-color: transparent;
+	width: fit-content;
+	width: -moz-fit-content;
+	z-index: 2;
+	font-size: $font-sm;
+	display: block;
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: -5px;
+		height: 120%;
+		width: 90%;
+		transform: scaleY(0.4) translateX(-10%);
+		background-color: $color-006;
+		transition: all 0.4s ease-in-out;
+		transform-origin: bottom center;
+		z-index: -1;
+	}
+	&:hover {
+		color: $color-002;
+		&::before {
+			transform: scaleY(1) translateX(-10%);
+		}
+	}
+}
+
+.btn-tertiary {
+	font-family: $font-001;
+	font-size: $font-md;
+	transition: all 0.4s ease-out;
+	cursor: pointer;
+	background-color: $color-006;
+	color: $color-002;
+	border: 2px solid $color-006;
+	padding: 10px 20px;
+	height: fit-content;
+	height: -moz-fit-content;
+	width: fit-content;
+	width: -moz-fit-content;
+	&:hover {
+		color: $color-006;
+		background-color: $color-002;
+	}
+}
+
+.burger-btn {
+	background-color: transparent;
+	border: none;
+	display: block;
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: fit-content;
+	width: -moz-fit-content;
+	aspect-ratio: 1/1;
+	transform: translateX(-50%);
+	transition: all 0.4s ease-out;
+	background-color: $color-002;
+	border-radius: 50%;
+	padding: 10px;
+	@include min($sm) {
+		bottom: 20px;
+	}
+	@include min($lg) {
+		bottom: 35%;
+	}
+	@include min($xxxl) {
+		display: none;
+	}
+	.line {
+		height: 3px;
+		width: 25px;
+		background-color: $color-001;
+		&:nth-child(2) {
+			margin: 5px 0;
+		}
+	}
+	.burger-line-1,
+	.burger-line-2,
+	.burger-line-3 {
+		transition: all 0.4s ease-in-out;
+		transform: rotate(0);
+		opacity: 1;
+	}
+}

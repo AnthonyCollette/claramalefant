@@ -1,5 +1,6 @@
 @import './base/reset';
 @import './utils/variables';
+@import './utils/mixins';
 @import './base/general';
 @import './base/typography';
 @import './components/buttons';
@@ -7,3 +8,5 @@
 @import './layout/header';
 @import './layout/footer';
 @import './pages/portfolio';
+@import './pages/about';
+@import './pages/formation';

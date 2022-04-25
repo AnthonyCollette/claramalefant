@@ -1,17 +1,34 @@
 nav {
-	padding: 80px 0;
+	padding: 40px 0 80px;
 	background-color: $color-002;
 	position: fixed;
 	z-index: 999;
 	top: 0;
 	left: 0;
 	right: 0;
+	@include min($lg) {
+		padding: 80px 0;
+	}
 	.container {
 		display: flex;
-		justify-content: space-between;
+		flex-direction: column;
 		align-items: center;
+		@include min($lg) {
+			justify-content: space-between;
+			align-items: center;
+			flex-direction: row;
+		}
 	}
 	.brand {
+		text-align: center;
+		@include min($md) {
+			width: fit-content;
+			width: -moz-fit-content;
+			max-width: 70%;
+		}
+		@include min($lg) {
+			text-align: left;
+		}
 		a {
 			display: block;
 		}
@@ -20,6 +37,12 @@ nav {
 			font-weight: 700;
 			font-size: 25px;
 			color: $color-001;
+			width: fit-content;
+			width: -moz-fit-content;
+			margin: 0 auto;
+			@include min($lg) {
+				margin: 0;
+			}
 		}
 		a.slogan {
 			font-family: $font-002;
@@ -27,10 +50,35 @@ nav {
 			margin-top: 10px;
 			color: $color-001;
 			font-weight: 300;
+			line-height: 1.3;
+		}
+	}
+	.nav-items {
+		position: absolute;
+		right: 10px;
+		top: 5%;
+		width: 100%;
+		@include min($lg) {
+			width: fit-content;
+			width: -moz-fit-content;
+			right: 140px;
+			top: auto;
 		}
 	}
 	ul {
 		display: flex;
+		transform: scaleY(0);
+		transition: all 0.4s ease-out;
+		transform-origin: center top;
+		flex-direction: column;
+		align-items: center;
+		background-color: $color-002;
+		@include min($xxxl) {
+			flex-direction: row;
+			transform: scaleY(1);
+			position: relative;
+			right: 0;
+		}
 		li {
 			text-transform: uppercase;
 			font-family: $font-002;
@@ -38,8 +86,7 @@ nav {
 			padding: 10px 20px;
 			position: relative;
 			transition-duration: 0.4s;
-			a,
-			span {
+			a {
 				color: $color-001;
 				transition-duration: 0.4s;
 				font-size: 14px;
@@ -64,14 +111,6 @@ nav {
 				}
 			}
 		}
-		li:nth-child(3) {
-			position: relative;
-			cursor: pointer;
-			i {
-				transition-duration: 0.4s;
-				margin-left: 5px;
-			}
-		}
 		.active {
 			display: block;
 			position: relative;
@@ -84,39 +123,6 @@ nav {
 				z-index: -1;
 				left: 0%;
 				top: 50%;
-			}
-		}
-	}
-	.submenu {
-		display: flex;
-		visibility: hidden;
-		opacity: 0;
-		flex-direction: column;
-		position: absolute;
-		top: 100%;
-		transition-duration: 0.4s;
-		a {
-			margin: 10px 0;
-			display: block;
-			position: relative;
-			&::before {
-				content: '';
-				width: 1px;
-				height: 15px;
-				background-color: $color-005;
-				z-index: -1;
-				left: -10%;
-				top: 50%;
-			}
-			&:active,
-			&:focus,
-			&:hover {
-				&::before {
-					content: '';
-					position: absolute;
-					width: 80%;
-					transition-duration: 0.4s;
-				}
 			}
 		}
 	}

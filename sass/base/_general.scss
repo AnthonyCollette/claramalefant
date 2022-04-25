@@ -22,7 +22,8 @@ a {
 	}
 }
 
-strong {
+strong,
+.strong {
 	font-weight: 600;
 }
 
@@ -35,6 +36,18 @@ strong {
 	opacity: 1 !important;
 }
 
+.display-none {
+	display: none;
+}
+
 section {
 	padding: 150px 0;
+}
+
+.to-bottom {
+	bottom: -70px !important;
+}
+
+.opacity {
+	opacity: 1 !important;
 }
