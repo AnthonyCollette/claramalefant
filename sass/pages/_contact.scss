@@ -1,0 +1,143 @@
+.contact {
+	padding: 100px 0;
+	background-color: $color-010;
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.contact-wrapper {
+		margin-top: 50px;
+		display: flex;
+		justify-content: space-around;
+		width: 100%;
+		box-sizing: border-box;
+		align-items: center;
+		flex-direction: column;
+		@include min($xxl) {
+			flex-direction: row;
+		}
+		&--right-column {
+			background-color: $color-002;
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: center;
+			height: fit-content;
+			height: -moz-fit-content;
+			padding: 50px 0 50px 20px;
+			margin-top: 50px;
+			width: 300px;
+			@include min($sm) {
+				width: 500px;
+				padding: 50px 0 50px 50px;
+			}
+			@include min($xxl) {
+				margin-top: 0;
+			}
+			h2 {
+				width: fit-content;
+				width: -moz-fit-content;
+				max-width: 60%;
+			}
+			.infos {
+				display: flex;
+				justify-content: space-between;
+				width: 80%;
+				margin-top: 20px;
+				.infos-left {
+					ul {
+						font-family: $font-001;
+						font-weight: 600;
+						li {
+							margin-top: 10px;
+							&:last-of-type {
+								margin-top: 35px;
+							}
+						}
+					}
+				}
+				.infos-right {
+					margin-left: 10px;
+					font-family: $font-001;
+					font-weight: 400;
+					@include min($sm) {
+						margin-left: 0;
+					}
+					li {
+						margin-top: 10px;
+						p:nth-of-type(2) {
+							margin-top: 10px;
+						}
+						a {
+							color: $color-001;
+							transition: all 0.2s ease-in-out;
+							margin: 0 5px 0 0;
+							&:hover {
+								color: $color-010;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	form {
+		font-family: $font-001;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $color-002;
+		padding: 20px;
+		box-shadow: 0 5px 5px rgba($color: $color-001, $alpha: 0.4);
+		.input-wrapper {
+			position: relative;
+			margin-bottom: 20px;
+			width: 80vw;
+			max-width: 400px;
+			label {
+				font-size: $font-md;
+				position: absolute;
+				top: 50%;
+				transform: translateY(-50%);
+				left: 20px;
+				background-color: $color-002;
+				padding: 0 10px;
+				transition: all 0.4s ease-in-out;
+			}
+			input,
+			textarea {
+				font-size: $font-md;
+				outline: 1px solid $color-001;
+				padding: 10px 20px;
+				border: none;
+				font-family: $font-001;
+				width: 100%;
+				box-sizing: border-box;
+				transition: all 0.2s ease-in-out;
+				&:focus-visible {
+					outline: 2px solid $color-010;
+				}
+			}
+			#label-message {
+				top: 20px;
+			}
+		}
+		.btn {
+			margin: 0 auto;
+			display: block;
+		}
+	}
+}
+
+.label-up {
+	top: -8px !important;
+	transform: translateY(0) !important;
+}
+
+.confirmation {
+	font-family: $font-001;
+	font-size: $font-md;
+	background-color: $color-002;
+	padding: 20px;
+}

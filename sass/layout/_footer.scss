@@ -1,15 +1,14 @@
 footer {
 	background-color: $color-002;
-	margin-top: 20px;
-	padding: 50px 0;
-	@include min($lg) {
-		margin-top: 100px;
-	}
+	padding: 20px 0;
+	width: 100%;
 	.container {
+		max-width: 80%;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		@include min($lg) {
+			max-width: 60%;
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
@@ -31,7 +30,7 @@ footer {
 				}
 			}
 			p {
-				margin-top: 30px;
+				margin-top: 10px;
 				font-family: $font-002;
 			}
 		}

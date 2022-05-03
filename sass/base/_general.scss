@@ -37,7 +37,7 @@ strong,
 }
 
 .display-none {
-	display: none;
+	display: none !important;
 }
 
 section {
@@ -50,4 +50,5 @@ section {
 
 .opacity {
 	opacity: 1 !important;
+	transition: all 0.4s ease-in-out;
 }

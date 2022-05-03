@@ -19,7 +19,7 @@
 			margin-left: 50px;
 		}
 		&::before {
-			@include min($lg) {
+			@include min(1311px) {
 				content: '';
 				position: absolute;
 				left: -15px;
@@ -30,6 +30,48 @@
 				transform: translateY(-50%) rotate(45deg);
 				z-index: -1;
 			}
+		}
+	}
+	.long.date::before {
+		@include min($lg) {
+			content: '';
+			position: absolute;
+			left: -25px;
+			top: 50%;
+			background-color: $color-009;
+			height: 70%;
+			aspect-ratio: 1/1;
+			transform: translateY(-50%) rotate(45deg);
+			z-index: -1;
+		}
+		@include min(1311px) {
+			content: '';
+			position: absolute;
+			left: -15px;
+			top: 50%;
+			background-color: $color-009;
+			height: 70%;
+			aspect-ratio: 1/1;
+			transform: translateY(-50%) rotate(45deg);
+			z-index: -1;
+		}
+	}
+
+	.middle.date::before {
+		@include min($lg) {
+			content: '';
+			position: absolute;
+			left: -25px;
+			top: 50%;
+			background-color: $color-009;
+			height: 70%;
+			aspect-ratio: 1/1;
+			transform: translateY(-50%) rotate(45deg);
+			z-index: -1;
+		}
+		@include min(1206px) {
+			left: -15px;
+			top: 50%;
 		}
 	}
 	.container {
