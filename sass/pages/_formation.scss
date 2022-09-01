@@ -114,6 +114,10 @@
 		}
 	}
 	&--module {
+		> p {
+			margin: 20px 0 0;
+			line-height: 1.4;
+		}
 		.desc {
 			display: flex;
 			align-items: center;
@@ -121,8 +125,14 @@
 			@include min($lg) {
 				flex-direction: row;
 			}
+			a {
+				display: block;
+			}
 			img {
-				width: 100%;
+				width: 250px;
+				@include min($sm) {
+					width: 340px;
+				}
 			}
 			&--text {
 				margin: 20px 0 0 0;
@@ -138,7 +148,7 @@
 		flex-wrap: wrap;
 		justify-content: space-around;
 		@include min($lg) {
-			margin-top: 80px;
+			margin-top: 50px;
 		}
 		&--single {
 			background-color: $color-002;

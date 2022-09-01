@@ -48,7 +48,7 @@ inputMessage.addEventListener('focusout', () => {
 	}
 })
 
-emailjs.init('kumy6jobfYirZhvg4')
+emailjs.init('_G44jr3A62Q8fEdzI')
 
 formData.addEventListener('submit', (e) => {
 	e.preventDefault()
@@ -59,7 +59,7 @@ formData.addEventListener('submit', (e) => {
 		formData.object.value != '' &&
 		formData.message.value != ''
 	) {
-		emailjs.sendForm('service_qufozu9', 'template_1dywiyi', formData).then(
+		emailjs.sendForm('service_taqbvsj', 'template_6t8lcta', formData).then(
 			() => {
 				console.log('Email envoyé !')
 				confirmationText.classList.remove('display-none')

@@ -694,9 +694,6 @@ header .hero--title .img-wrapper .img-overlay {
     background-color: transparent;
   }
 }
-header .hero--title img {
-  width: 100%;
-}
 header .hero--text {
   max-width: 600px;
   width: 80vw;
@@ -940,6 +937,7 @@ footer .container .contacts .right-column a:hover i {
   display: flex;
   background-color: #dbf0ff;
   padding: 10px 50px 10px 10px;
+  position: relative;
 }
 @media (min-width: 992px) {
   .portfolio__case {
@@ -949,19 +947,51 @@ footer .container .contacts .right-column a:hover i {
 .portfolio__case:nth-of-type(1) {
   margin-top: 20px;
 }
+.portfolio__case--text {
+  height: 20px;
+}
 .portfolio__case .title {
   font-size: 1rem;
   font-weight: 600;
   color: #0050ff;
-}
-.portfolio__case p {
-  font-size: 0.875rem;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  max-width: 90%;
+}
+.portfolio__case .content {
+  font-size: 0.875rem;
+  opacity: 0;
+  transform: scaleY(0);
+  transform-origin: top center;
+}
+.portfolio__case .content ul {
+  list-style: disc;
+}
+.portfolio__case .content ul li {
+  margin-left: 20px;
+}
+.portfolio__case .content .mission {
+  text-decoration: underline;
+  position: relative;
+  margin-left: 15px;
+}
+.portfolio__case .content .mission::before {
+  content: "";
+  position: absolute;
+  width: 5px;
+  aspect-ratio: 1/1;
+  background-color: transparent;
+  border: 1px solid #000;
+  left: -15px;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
 }
 .portfolio__case .button-plus {
-  position: relative;
+  position: absolute;
+  right: 10px;
+  top: 10px;
   width: 20px;
   height: 20px;
   margin-left: 20px;
@@ -1073,6 +1103,20 @@ footer .container .contacts .right-column a:hover i {
 }
 .experience-accordeon:hover {
   box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.8);
+}
+.experience-accordeon .title,
+.experience-accordeon strong {
+  font-weight: 700;
+  margin: 10px 0 5px;
+}
+.experience-accordeon ul {
+  list-style: disc;
+}
+.experience-accordeon ul li {
+  margin-left: 20px;
+}
+.experience-accordeon h4 {
+  line-height: 1.3;
 }
 .experience-accordeon__title {
   display: flex;
@@ -1574,6 +1618,10 @@ footer .container .contacts .right-column a:hover i {
   transform: translateY(-50%) rotate(45deg);
   background-color: #0050ff;
 }
+.formations--module > p {
+  margin: 20px 0 0;
+  line-height: 1.4;
+}
 .formations--module .desc {
   display: flex;
   align-items: center;
@@ -1584,8 +1632,16 @@ footer .container .contacts .right-column a:hover i {
     flex-direction: row;
   }
 }
+.formations--module .desc a {
+  display: block;
+}
 .formations--module .desc img {
-  width: 100%;
+  width: 250px;
+}
+@media (min-width: 576px) {
+  .formations--module .desc img {
+    width: 340px;
+  }
 }
 .formations--module .desc--text {
   margin: 20px 0 0 0;
@@ -1603,7 +1659,7 @@ footer .container .contacts .right-column a:hover i {
 }
 @media (min-width: 992px) {
   .formations .modules {
-    margin-top: 80px;
+    margin-top: 50px;
   }
 }
 .formations .modules--single {
