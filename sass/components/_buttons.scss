@@ -130,3 +130,19 @@
 		opacity: 1;
 	}
 }
+
+.btn-full-width {
+	width: 100%;
+	background-color: $color-006;
+	padding: 15px 50px;
+	color: $color-002;
+	border: 2px solid $color-006;
+	transition: all .4s ease-in-out;
+	&::before {
+		display: none;
+	}
+	&:hover {
+		color: $color-006;
+		background-color: $color-002;
+	}
+}
